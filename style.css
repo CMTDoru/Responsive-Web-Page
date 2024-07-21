@@ -1,7 +1,7 @@
-/* body styling, removing margins */
 body {
   height: 100vh;
   margin: 0; /* Removes default margin */
+  overflow-x: hidden;
 }
 
 #mainContainer {
@@ -30,6 +30,8 @@ body {
 }
 
 #bannerButton {
+  display: flex;
+  align-items: center;
   background-color: #969696;
   color: #f9f9f9;
   font-size: 14px;
@@ -46,9 +48,20 @@ body {
 }
 
 #header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-color: #f9f9f9;
   width: 100%;
   height: fit-content;
+}
+
+#rightContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 20px;
+  gap: 20px; /* Adds 20px of space between the elements */
 }
 
 #menu {
@@ -91,19 +104,19 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 #shopSugestionTwo {
+  white-space: nowrap;
   font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
   padding: 10px 0 10px 0;
 }
 #shopButton {
   background-color: #f9f9f9;
-  border-color: #969696;
-  border-style: solid;
   color: #969696;
   font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
   padding: 10px 45px;
   width: fit-content;
+  border: 3px solid #969696;
 }
 
 #productContainer {
@@ -130,6 +143,11 @@ body {
 #productImage {
   width: 100%;
   height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+#productImage:hover {
+  transform: scale(1.1);
 }
 
 #productDescription {
@@ -140,4 +158,210 @@ body {
   font-size: 18px;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.search {
+  width: fit-content;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 200px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  border: 3px solid #969696;
+  border-right: none;
+  padding: 5px;
+  height: 18px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9dbfaf;
+}
+
+.searchButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 32px;
+  border: 3px solid #969696;
+  border-left: none;
+  background: #f9f9f9;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#searchImg {
+  width: 20px;
+  height: 20px;
+}
+
+#userContainer {
+  display: flex;
+  gap: 20px;
+}
+
+#loginContainer,
+#registerContainer {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Adds 20px of space between the elements */
+}
+
+#login,
+#signup {
+  max-width: fit-content;
+  white-space: nowrap;
+}
+
+#hamburgerMenu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  #header {
+    flex-direction: column; /* Changes layout to row at 768px width */
+    align-items: center;
+  }
+
+  #leftContainer {
+    margin-bottom: 10px;
+  }
+
+  #leftContainer,
+  #rightContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  #menu {
+    justify-content: center;
+    align-items: center;
+  }
+
+  #menu.active {
+    left: 0; /* Move into view */
+  }
+
+  #bundles {
+    margin: 15px 15px 15px 15px;
+  }
+
+  .search {
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  #header {
+    flex-direction: column; /* Changes layout to row at 768px width */
+    align-items: center;
+  }
+
+  #leftContainer {
+    margin-bottom: 10px;
+  }
+
+  #leftContainer,
+  #rightContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Changes layout to row at 768px width */
+    justify-content: center; /* Centers the elements horizontally */
+    align-items: center; /* Centers the elements vertically */
+    gap: 10px;
+  }
+
+  #rightContainer {
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+  }
+
+  #userContainer {
+    display: none;
+  }
+
+  #linkContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    order: 1;
+  }
+
+  .search {
+    order: 2;
+    width: 90%;
+    min-width: 320px;
+    margin: 0;
+  }
+
+  .searchTerm {
+    width: 100%;
+  }
+
+  #menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: normal;
+    position: absolute;
+    min-width: 140px;
+    min-height: 100px;
+    left: -100%;
+    top: 155px;
+    gap: 10px;
+    width: fit-content;
+    transition: left 0.5s ease; /* Animate the left property */
+  }
+
+  #menu.active {
+    left: 0; /* Move into view */
+  }
+
+  #bundles {
+    font-size: 14px;
+    color: #f9f9f9;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 0 0 20px;
+  }
+
+  #hamburgerMenu {
+    display: flex;
+    margin-left: 15px;
+    cursor: pointer;
+  }
+
+  #cartContainer {
+    margin-right: 15px;
+  }
+
+  #productContainer {
+    flex-direction: column;
+  }
+
+  #product {
+    width: 75%;
+  }
+
+  #productDescription {
+    margin-top: 10px;
+  }
+
+  #productPrice {
+    margin-bottom: 15px;
+  }
+
+  #banner {
+    white-space: nowrap;
+  }
 }

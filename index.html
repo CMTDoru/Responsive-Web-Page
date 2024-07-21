@@ -15,7 +15,43 @@
         </div>
         <div id="divider1"></div>
         <div id="header">
-          <img src="images/logo.jpg" alt="logo" id="logo" />
+          <div id="leftContainer">
+            <img src="images/logo.jpg" alt="logo" id="logo" />
+          </div>
+          <div id="rightContainer">
+            <div class="search">
+              <input
+                type="text"
+                class="searchTerm"
+                placeholder="Search (keywords, etc)"
+              />
+              <button type="submit" class="searchButton">
+                <img src="images/search.png" alt="searchImg" id="searchImg" />
+              </button>
+            </div>
+            <div id="userContainer">
+              <div id="loginContainer">
+                <img src="images/icon1.png" alt="user" id="userImg" />
+                <span id="login">Login</span>
+              </div>
+              <div id="registerContainer">
+                <img src="images/icon2.png" alt="register" id="registerImg" />
+                <span id="signup">Sign up</span>
+              </div>
+            </div>
+            <div id="linkContainer">
+              <div id="hamburgerMenu">
+                <img
+                  src="images/hamburger.png"
+                  alt="hamburgerMenu"
+                  id="hamburgerMenuImg"
+                />
+              </div>
+              <div id="cartContainer">
+                <img src="images/cart.jpg" alt="cart" id="cart" />
+              </div>
+            </div>
+          </div>
         </div>
         <div id="divider2"></div>
         <div id="menu">
@@ -47,38 +83,62 @@
         <div id="divider4"></div>
         <div id="productContainer">
           <div id="product">
-            <img
-              src="images/product1_desktop.jpg"
-              alt="product1"
-              id="productImage"
-            />
+            <picture>
+              <source
+                srcset="images/product1_mobile.jpg"
+                media="(max-width: 600px)"
+              />
+              <img
+                src="images/product1_desktop.jpg"
+                alt="product1"
+                id="productImage"
+              />
+            </picture>
             <span id="productDescription">Jean</span>
             <span id="productPrice">59,90 €</span>
           </div>
           <div id="product">
-            <img
-              src="images/product2_desktop.jpg"
-              alt="product2"
-              id="productImage"
-            />
+            <picture>
+              <source
+                srcset="images/product2_mobile.jpg"
+                media="(max-width: 600px)"
+              />
+              <img
+                src="images/product2_desktop.jpg"
+                alt="product2"
+                id="productImage"
+              />
+            </picture>
             <span id="productDescription">T-Shirt</span>
             <span id="productPrice">59,90 €</span>
           </div>
           <div id="product">
-            <img
-              src="images/product3_desktop.jpg"
-              alt="product3"
-              id="productImage"
-            />
+            <picture>
+              <source
+                srcset="images/product3_mobile.jpg"
+                media="(max-width: 600px)"
+              />
+              <img
+                src="images/product3_desktop.jpg"
+                alt="product3"
+                id="productImage"
+              />
+            </picture>
             <span id="productDescription">Dress</span>
             <span id="productPrice">59,90 €</span>
           </div>
           <div id="product">
-            <img
-              src="images/product4_desktop.jpg"
-              alt="product4"
-              id="productImage"
-            />
+            <picture>
+              <source
+                srcset="images/product4_mobile.jpg"
+                media="(max-width: 600px)"
+              />
+              <img
+                src="images/product4_desktop.jpg"
+                alt="product4"
+                id="productImage"
+              />
+            </picture>
             <span id="productDescription">Shirt</span>
             <span id="productPrice">59,90 €</span>
           </div>
