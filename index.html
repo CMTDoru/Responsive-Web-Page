@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Responsive Web Page</title>
+  </head>
+  <body>
+    <body>
+      <div id="mainContainer">
+        <div id="banner">
+          <span id="bannerText">FREE 2-Day SHIPPING FOR ORDERS OVER €300</span>
+          <span id="bannerButton"> X </span>
+        </div>
+        <div id="divider1"></div>
+        <div id="header">
+          <img src="images/logo.jpg" alt="logo" id="logo" />
+        </div>
+        <div id="divider2"></div>
+        <div id="menu">
+          <span id="bundles">Bundles</span>
+          <span id="bundles">Shop the look</span>
+          <span id="bundles">Gift cards</span>
+        </div>
+        <div id="mainImageContaine">
+          <picture>
+            <source
+              srcset="images/mainImage_mobile.jpg"
+              media="(max-width: 600px)"
+            />
+            <img
+              src="images/mainImage_desktop.jpg"
+              alt="mainImage"
+              id="mainImage"
+            />
+          </picture>
+        </div>
+        <div id="divider3"></div>
+        <div id="shopContainer">
+          <span id="shopSugestionOne">Shop the Outfit</span>
+          <span id="shopSugestionTwo"
+            >We suggest follow products to combinate</span
+          >
+          <button id="shopButton">Shop now</button>
+        </div>
+        <div id="divider4"></div>
+        <div id="productContainer">
+          <div id="product">
+            <img
+              src="images/product1_desktop.jpg"
+              alt="product1"
+              id="productImage"
+            />
+            <span id="productDescription">Jean</span>
+            <span id="productPrice">59,90 €</span>
+          </div>
+          <div id="product">
+            <img
+              src="images/product2_desktop.jpg"
+              alt="product2"
+              id="productImage"
+            />
+            <span id="productDescription">T-Shirt</span>
+            <span id="productPrice">59,90 €</span>
+          </div>
+          <div id="product">
+            <img
+              src="images/product3_desktop.jpg"
+              alt="product3"
+              id="productImage"
+            />
+            <span id="productDescription">Dress</span>
+            <span id="productPrice">59,90 €</span>
+          </div>
+          <div id="product">
+            <img
+              src="images/product4_desktop.jpg"
+              alt="product4"
+              id="productImage"
+            />
+            <span id="productDescription">Shirt</span>
+            <span id="productPrice">59,90 €</span>
+          </div>
+        </div>
+      </div>
+    </body>
+    <script src="script.js"></script>
+  </body>
+</html>
