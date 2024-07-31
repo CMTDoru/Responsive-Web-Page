@@ -167,7 +167,7 @@ body {
 }
 
 .searchTerm {
-  width: 200px;
+  width: 100%;
   font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
@@ -178,6 +178,7 @@ body {
   border-radius: 5px 0 0 5px;
   outline: none;
   color: #9dbfaf;
+  background-color: #f9f9f9;
 }
 
 .searchButton {
@@ -185,7 +186,6 @@ body {
   align-items: center;
   justify-content: center;
   width: 40px;
-  height: 32px;
   border: 3px solid #969696;
   border-left: none;
   background: #f9f9f9;
@@ -303,10 +303,6 @@ body {
     width: 90%;
     min-width: 320px;
     margin: 0;
-  }
-
-  .searchTerm {
-    width: 100%;
   }
 
   #menu {
